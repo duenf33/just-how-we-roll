@@ -27,29 +27,75 @@ const sortByNumber = function(arr) {
   return arr.slice().sort(byNumber);
 }
 
+/*************
+ * VARIABLES *
+ *************/
+const resetButton = document.querySelector('#reset-button');
+
+const firstDieButton = document.querySelector('#d6-roll');
+const firstMean = document.querySelector('#d6-rolls-mean')
+const firstMedian = document.querySelector('#d6-rolls-median');
+const firstMode = document.querySelector('#d6-rolls-mode');
+
+const dice1 = document.querySelector('#double-d6-roll-1');
+const dice2 = document.querySelector('#double-d6-roll-2');
+
+
 /*******************
  * YOUR CODE BELOW *
  *******************/
+const firstMeanNA = () => {
+  // const newP = document.createElement('p');
+  firstMean.innerText = 'N/A';
+  // firstMean.appendChild(newP);
+}
+const firstMedianNA = () => {
+  const newP = document.createElement('p');
+  newP.innerText = 'N/A';
+  firstMedian.appendChild(newP);
+}
+const firstModeNA = () => {
+  const newP = document.createElement('p');
+  newP.innerText = 'N/A';
+  firstMode.appendChild(newP);
+}
+  
+
+/******************
+ * RESET FUNCTION *
+ ******************/
+const reset = () => {
+  console.log('reset')
+  firstDieButton.src = './images/start/d6.png';
+  firstMeanNA();
+  firstMedianNA();
+  firstModeNA();
+  
+}
+reset()
+
 
 
 
 /*******************
  * EVENT LISTENERS *
  *******************/
-
-
-
-
-/******************
- * RESET FUNCTION *
- ******************/
+resetButton.addEventListener('click', reset)
 
 
 
 /****************************
  * CLICK HANDLING FUNCTIONS *
-****************************/
-
+ ****************************/
+firstDieButton.addEventListener('click', () => {
+  firstDieButton.src = './images/start/d6.png';
+})
+dice1.addEventListener('click', () => {
+  dice1.src = './images/start/d6.png'
+})
+dice2.addEventListener('click', () => {
+  dice2.src = './images/start/d6.png'
+})
 
 
 /****************
