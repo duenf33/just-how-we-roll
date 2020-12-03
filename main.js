@@ -117,6 +117,7 @@ firstDieButton.addEventListener('click', () => {
   console.log(random1);
   sixes.push(random1);
   firstMean.innerText = meanResult(sixes);
+  firstMedian.innerText = sortByNumber(sixes);
   switch (random1) {
     case 1:
       firstDieButton.src = './images/d6/1.png';
@@ -143,6 +144,8 @@ diceDouble.addEventListener('click', () => {
   const random2 = getRandomNumber(6)
   console.log(random2);
   doubleSixes.push(random2);
+  diceMean.innerText = meanResult(doubleSixes);
+  diceMedian.innerText = sortByNumber(doubleSixes)
   switch (random2) {
     case 1:
       dice1.src = './images/d6/1.png';
@@ -168,7 +171,6 @@ diceDouble.addEventListener('click', () => {
   const random3 = getRandomNumber(6)
   console.log(random3);
   doubleSixes.push(random3);
-  console.log(meanResult(sixes));
   switch (random3) {
     case 1:
       dice2.src = './images/d6/1.png';
@@ -194,6 +196,8 @@ dice12.addEventListener('click', () => {
   const random4 = getRandomNumber(12)
   console.log(random4);
   twelves.push(random4);
+  dice12Mean.innerText = meanResult(twelves);
+  dice12Median.innerText = sortByNumber(twelves);
   switch (random4) {
     case 1:
       dice12.src = './images/numbers/1.png';
@@ -237,6 +241,8 @@ dice20.addEventListener('click', () => {
   const random5 = getRandomNumber(20)
   console.log(random5);
   twenties.push(random5);
+  dice20Mean.innerText = meanResult(twenties);
+  dice20Median.innerText = sortByNumber(twenties)
   switch (random5) {
     case 1:
       dice20.src = './images/numbers/1.png';
