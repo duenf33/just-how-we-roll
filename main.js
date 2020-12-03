@@ -27,6 +27,15 @@ const sortByNumber = function(arr) {
   return arr.slice().sort(byNumber);
 }
 
+const meanResult = (arr) => {
+  let result = 0;
+  for(const arrs of arr){
+    console.log(arrs);
+    result += arrs;
+  }
+  return result / arr.length;
+}
+
 /*************
  * VARIABLES *
  *************/
@@ -107,6 +116,7 @@ firstDieButton.addEventListener('click', () => {
   const random1 = getRandomNumber(6)
   console.log(random1);
   sixes.push(random1);
+  firstMean.innerText = meanResult(sixes);
   switch (random1) {
     case 1:
       firstDieButton.src = './images/d6/1.png';
@@ -126,7 +136,8 @@ firstDieButton.addEventListener('click', () => {
     case 6:
       firstDieButton.src = 'images/d6/6.png';
       break;
-  }  
+  } 
+  
 })
 diceDouble.addEventListener('click', () => {
   const random2 = getRandomNumber(6)
@@ -157,6 +168,7 @@ diceDouble.addEventListener('click', () => {
   const random3 = getRandomNumber(6)
   console.log(random3);
   doubleSixes.push(random3);
+  console.log(meanResult(sixes));
   switch (random3) {
     case 1:
       dice2.src = './images/d6/1.png';
